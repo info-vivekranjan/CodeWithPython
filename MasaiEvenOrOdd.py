@@ -4,3 +4,6 @@ if n % 2 == 0:
     print("Even")
 else:
     print("Odd")
+
+# Test case check
+# https://oj.masaischool.com/status/bbc1adf7f8e62a684c3f32f9f8acce77
