@@ -1,0 +1,34 @@
+<div style={{ textAlign: 'right' }}>
+  <IconButton
+    aria-label="more"
+    id="long-button"
+    aria-controls="long-menu"
+    aria-expanded={open ? 'true' : undefined}
+    aria-haspopup="true"
+    onClick={handleClick}
+    edge="end"
+  >
+    <MoreVertIcon />
+  </IconButton>
+  <Menu
+    id="long-menu"
+    MenuListProps={{
+      'aria-labelledby': 'long-button',
+    }}
+    anchorEl={anchorEl}
+    open={open}
+    onClose={handleClose}
+    PaperProps={{
+      style: {
+        maxHeight: MENU_HEIGHT * 4.5,
+        width: '12ch',
+        boxShadow: '1px 1px 4px 2px #c0c0c050',
+      },
+    }}
+    key={item._id}
+  >
+    <MenuItem>Resubmit</MenuItem>
+    <MenuItem>Pause</MenuItem>
+    <MenuItem onClick={() => handleCancel(item._id)}>Cancel</MenuItem>
+  </Menu>
+</div>;
